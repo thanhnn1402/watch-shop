@@ -5926,6 +5926,11 @@ a.close.disabled {
   right: -50px
 }
 
+.slider-item {
+  background: url("../img/luxury-watch-6c24a59ca8-removebg-preview.png") center right no-repeat;
+  background-size: contain;
+}
+
 .carousel {
   position: relative;
 }
@@ -9642,6 +9647,7 @@ a.text-dark:hover, a.text-dark:focus {
   top: 100%;
   transform: scale(0);
   transition: all .3s ease-in-out;
+  transform-origin: top left;
   z-index: 1;
 
 }
