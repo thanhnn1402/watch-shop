@@ -9612,6 +9612,12 @@ a.text-dark:hover, a.text-dark:focus {
   transform: scaleX(1);
 }
 
+@media (max-width: 991px) {
+  .navbar-light .navbar-nav .nav-link::after {
+    display: none;
+  }
+}
+
 @media (max-width: 991.98px) {
   .navbar-light .navbar-nav .nav-link {
     padding: 5px 0px;
@@ -9768,4 +9774,13 @@ a.text-dark:hover, a.text-dark:focus {
   100% {
     transform: translateY(-15px);
   }
+}
+
+
+
+
+/* Test */
+
+.rate-star:hover  {
+  background-color:var(--pink);
 }
