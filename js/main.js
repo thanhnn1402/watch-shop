@@ -6,23 +6,6 @@
     let sumCart = document.querySelector('.sum-cart');
     sumCart.innerText = dataCartStorage.length || 0;
     
-    // Dropdown on mouse hover
-    $(document).ready(function () {
-        function toggleNavbarMethod() {
-            if ($(window).width() > 992) {
-                $('.navbar .dropdown').on('mouseover', function () {
-                    $('.dropdown-toggle', this).trigger('click');
-                }).on('mouseout', function () {
-                    $('.dropdown-toggle', this).trigger('click').blur();
-                });
-            } else {
-                $('.navbar .dropdown').off('mouseover').off('mouseout');
-            }
-        }
-        toggleNavbarMethod();
-        $(window).resize(toggleNavbarMethod);
-    });
-
 
     function getParent(Element, Selector) {
         while (Element.parentElement) {
@@ -144,14 +127,16 @@
                             <td class="align-middle"><button class="btn-delete-cart btn btn-sm btn-primary" data-delete="${item.id}"> <i class="fa fa-times"></i></button></td>
                         </tr>
                     `;
-                })
+                });
+
+                subTotalCart.innerText = `$${result}`;
+                totalCart.innerText = `$${result + 10}`;
+            
+                tableCart.innerHTML = htmls.join('');
+
             };
 
-            subTotalCart.innerText = `$${result}`;
-            totalCart.innerText = `$${result + 10}`;
-        
-            tableCart.innerHTML = htmls.join('');
-        
+
         }
     }
 
@@ -186,7 +171,6 @@
     function deleteCart() {
         if(document.querySelectorAll('.btn-delete-cart') && dataCartStorage.length > 0) {
             const btnDeleteCart = document.querySelectorAll('.btn-delete-cart');
-            let toastMessage = document.querySelector('.toast-message');
 
             btnDeleteCart.forEach((item, index) => {
                 item.onclick = () => {
@@ -207,6 +191,51 @@
                     // }, 500)
                 }
             })
+        }
+    }
+
+
+    function handleCheckout() {
+        if(document.querySelector('.btn-proceed-ckeckout')) {
+            const btnRedirect = document.querySelector('.btn-proceed-ckeckout');
+            let toastMessage = document.querySelector('.toast-message');
+
+            btnRedirect.onclick = (event) => {
+                if(dataCartStorage.length <= 0) {
+                    event.preventDefault();
+
+                    toastMessage.style.display = 'block';                        
+    
+                    setTimeout(() => {
+                        toastMessage.style.display = 'none';
+                    }, 1000)
+                }
+            }
+
+        }
+
+
+        // render view checkout 
+        if(dataCartStorage.length > 0 && document.querySelector('.order-products')) {
+            const girdOrderProduct = document.querySelector('.order-products');
+            let subTotalCheckout = document.querySelector('.subtotal-checkout');
+            let totalCheckout = document.querySelector('.total-checkout');
+            let result = 0;
+
+            const htmls = dataCartStorage.map((item) => {
+                result += item.price * item.quantity;
+                return `
+                    <div class="d-flex justify-content-between">
+                        <p>${item.name} x${item.quantity}</p>
+                        <p>$${item.price * item.quantity}</p>
+                    </div>
+                `;
+            });
+
+            girdOrderProduct.innerHTML = htmls.join('');
+            subTotalCheckout.innerText = `$${result}`;
+            totalCheckout.innerText = `$${result + 10}`;
+
         }
     }
     
@@ -286,6 +315,7 @@
     getDataCart();
     updateCart();
     deleteCart();
+    handleCheckout();
 
 
     // Product Quantity
