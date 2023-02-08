@@ -16,7 +16,8 @@
 
         $sql = "SELECT don_hang.id, don_hang.trang_thai, don_hang.updated_at
                 FROM don_hang
-                WHERE don_hang.id_khach_hang = {$user['id']}";
+                WHERE don_hang.id_khach_hang = {$user['id']}
+                ORDER BY don_hang.created_at DESC";
         $query = mysqli_query($conn, $sql);
         while($row = mysqli_fetch_assoc($query)) {
             $donhang[] = $row;
@@ -276,36 +277,32 @@
                         <h2 class="mb-4 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border border-white px-3 mr-1">WATCH</span><span class="text-light">SHOP</span></h2>
                     </a>
                     <p>Dolore erat dolor sit lorem vero amet. Sed sit lorem magna, ipsum no sit erat lorem et magna ipsum dolore amet erat.</p>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt text-light mr-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-envelope text-light mr-3"></i>info@example.com</p>
-                    <p class="mb-0"><i class="fa fa-phone-alt text-light mr-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-light mr-3"></i>CMT8, Ninh kiều, Cần Thơ</p>
+                    <p class="mb-2"><i class="fa fa-envelope text-light mr-3"></i>example@gmail.com</p>
+                    <p class="mb-0"><i class="fa fa-phone-alt text-light mr-3"></i>029.382.323</p>
                 </div>
                 <div class="col-lg-8 col-md-12">
                     <div class="row">
                         <div class="col-md-4 mb-5">
-                            <h5 class="font-weight-bold text-light mb-4">Quick Links</h5>
+                            <h5 class="font-weight-bold text-light mb-4">Liên kết</h5>
                             <div class="d-flex flex-column justify-content-start">
                                 <a class="text-light mb-2" href="index.php"><i class="fa fa-angle-right mr-2"></i>Trang chủ</a>
-                                <a class="text-light mb-2" href="shop.php"><i class="fa fa-angle-right mr-2"></i>Our Sản Phẩm</a>
-                                <a class="text-light mb-2" href="detail.php"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a>
+                                <a class="text-light mb-2" href="shop.php"><i class="fa fa-angle-right mr-2"></i>Sản Phẩm</a>
                                 <a class="text-light mb-2" href="cart.php"><i class="fa fa-angle-right mr-2"></i>Giỏ hàng</a>
-                                <a class="text-light mb-2" href="checkout.php"><i class="fa fa-angle-right mr-2"></i>Checkout</a>
-                                <a class="text-light" href="contact.php"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                                <a class="text-light" href="contact.php"><i class="fa fa-angle-right mr-2"></i>Liên hệ</a>
                             </div>
                         </div>
                         <div class="col-md-4 mb-5">
-                            <h5 class="font-weight-bold text-light mb-4">Quick Links</h5>
+                            <h5 class="font-weight-bold text-light mb-4">Liên kết</h5>
                             <div class="d-flex flex-column justify-content-start">
                                 <a class="text-light mb-2" href="index.php"><i class="fa fa-angle-right mr-2"></i>Trang chủ</a>
-                                <a class="text-light mb-2" href="shop.php"><i class="fa fa-angle-right mr-2"></i>Our Sản Phẩm</a>
-                                <a class="text-light mb-2" href="detail.php"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a>
+                                <a class="text-light mb-2" href="shop.php"><i class="fa fa-angle-right mr-2"></i>Sản Phẩm</a>
                                 <a class="text-light mb-2" href="cart.php"><i class="fa fa-angle-right mr-2"></i>Giỏ hàng</a>
-                                <a class="text-light mb-2" href="checkout.php"><i class="fa fa-angle-right mr-2"></i>Checkout</a>
-                                <a class="text-light" href="contact.php"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                                <a class="text-light" href="contact.php"><i class="fa fa-angle-right mr-2"></i>Liên hệ</a>
                             </div>
                         </div>
                         <div class="col-md-4 mb-5">
-                            <h5 class="font-weight-bold text-light mb-4">Newsletter</h5>
+                            <h5 class="font-weight-bold text-light mb-4">Ưu đãi</h5>
                             <form action="">
                                 <div class="form-group">
                                     <input type="text" class="form-control border-0 py-4" placeholder="Your Name" required="required" />
@@ -315,7 +312,7 @@
                                         required="required" />
                                 </div>
                                 <div>
-                                    <button class="btn btn-primary btn-block border-0 py-3" type="submit">Subscribe Now</button>
+                                    <button class="btn btn-primary btn-block border-0 py-3" type="submit">Đăng ký ngay</button>
                                 </div>
                             </form>
                         </div>

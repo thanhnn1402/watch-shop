@@ -261,16 +261,14 @@
                                 <div class="col-lg-3 col-md-6 col-12 mt-3">
                                     <div class="card">
                                         <div class="card-body">
-                                          <div class="card-body-left">
-                                            <span class="card-icon bg-danger bg-opacity-10">
-                                                <i class="fa-solid fa-sack-dollar text-danger"></i>
-                                            </span>
-                                            <p class="card-text">Doanh thu tháng</p>
+                                          <div class="card-body-top">
+                                            <p class="card-text">Doanh thu</p>
+                                            <span class="card-icon">Ngày</span>
                                           </div>
 
-                                          <div class="card-body-right">
-                                            <p class="card-total">50.000.000 </br> VND</p>
-                                            <p class="text-success"><i class="fa-solid fa-arrow-trend-up"></i> +10.8%</p>
+                                          <div class="card-body-bottom">
+                                            <p class="card-total">2.000.000 VND</p>
+                                            <p class="mb-0 text-success"><i class="fa-solid fa-arrow-trend-up"></i> +10.8%</p>
                                           </div>
                                         </div>
                                     </div>
@@ -279,16 +277,14 @@
                                 <div class="col-lg-3 col-md-6 col-12 mt-3">
                                     <div class="card">
                                         <div class="card-body">
-                                          <div class="card-body-left">
-                                            <span class="card-icon bg-success bg-opacity-10">
-                                                <i class="fa-solid fa-coins text-success"></i>
-                                            </span>
-                                            <p class="card-text">Doanh thu ngày</p>
+                                          <div class="card-body-top">
+                                            <p class="card-text">Doanh thu</p>
+                                            <span class="card-icon">Tuần</span>
                                           </div>
 
-                                          <div class="card-body-right">
-                                            <p class="card-total">1.150.000 </br> VND</p>
-                                            <p class="text-danger"><i class="fa-solid fa-arrow-trend-down"></i> -5.8%</p>
+                                          <div class="card-body-bottom">
+                                            <p class="card-total">10.000.000 VND</p>
+                                            <p class="mb-0 text-danger"><i class="fa-solid fa-arrow-trend-down"></i> -5.8%</p>
                                           </div>
                                         </div>
                                     </div>
@@ -297,16 +293,14 @@
                                 <div class="col-lg-3 col-md-6 col-12 mt-3">
                                     <div class="card">
                                         <div class="card-body">
-                                          <div class="card-body-left">
-                                            <span class="card-icon bg-info bg-opacity-10">
-                                                <i class="fa-solid fa-bag-shopping text-info"></i>
-                                            </span>
-                                            <p class="card-text">Tổng đơn hàng</p>
+                                          <div class="card-body-top">
+                                            <p class="card-text">Doanh thu</p>
+                                            <span class="card-icon">Tháng</span>
                                           </div>
 
-                                          <div class="card-body-right">
-                                            <p class="card-total">200 </br> ĐƠN</p>
-                                            <p class="text-success"><i class="fa-solid fa-arrow-trend-up"></i> +10.8%</p>
+                                          <div class="card-body-bottom">
+                                            <p class="card-total">50.000.000</p>
+                                            <p class="mb-0 text-success"><i class="fa-solid fa-arrow-trend-up"></i> +10.8%</p>
                                           </div>
                                         </div>
                                     </div>
@@ -315,16 +309,14 @@
                                 <div class="col-lg-3 col-md-6 col-12 mt-3">
                                     <div class="card">
                                         <div class="card-body">
-                                          <div class="card-body-left">
-                                            <span class="card-icon bg-warning bg-opacity-10">
-                                                <i class="fa-solid fa-burger text-warning"></i>
-                                            </span>
-                                            <p class="card-text">Tổng sản phẩm</p>
+                                          <div class="card-body-top">
+                                          <p class="card-text">Doanh thu</p>
+                                            <span class="card-icon">Quý</span>
                                           </div>
 
-                                          <div class="card-body-right">
-                                            <p class="card-total">1000 </br> SP</p>
-                                            <p class="text-danger"><i class="fa-solid fa-arrow-trend-down"></i> -12.8%</p>
+                                          <div class="card-body-bottom">
+                                            <p class="card-total">100.000.000 VND</p>
+                                            <p class="mb-0 text-danger"><i class="fa-solid fa-arrow-trend-down"></i> -12.8%</p>
                                           </div>
                                         </div>
                                     </div>
